@@ -1,7 +1,7 @@
 import React from 'react';
 import Background from '../_components/landing/background';
 import Image from 'next/image';
-
+import VenueScrollBar from '../_components/venueScrollBar';
 const Landing = () => {
     return (
         <div className="h-screen w-screen flex flex-row">
@@ -34,7 +34,9 @@ const Landing = () => {
                     />
                 </div>
             </div>
-            <div className="w-1/2 h-full"></div>
+            <div className="w-1/2 h-full pr-36 flex flex-row justify-end items-center">
+                <VenueScrollBar />
+            </div>
         </div>
     );
 };
