@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 
 const VenueScrollBar = () => {
@@ -78,7 +78,7 @@ const VenueScrollBar = () => {
                     <div className="h-[200vh]"></div>
                 </div>
             </div>
-            <div className="h-full flex flex-col justify-center gap-8 items-center">
+            <div className="hidden lg:flex h-full w-full flex-col justify-center gap-8 items-center">
                 {[0, 1, 2, 3, 4].map((index) => (
                     <div
                         key={index}
