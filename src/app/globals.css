@@ -1,10 +1,9 @@
 @import 'tailwindcss';
 
 :root {
-
-  --background: #ffffff;
-  --foreground: #131313;
-
+    --background: #ffffff;
+    --foreground: #131313;
+}
 
 @theme inline {
     --color-background: var(--background);
@@ -14,32 +13,32 @@
 }
 
 @media (prefers-color-scheme: dark) {
-
-  :root {
-    --text-highlight: #db632b;
-    --text-base: #E9E9E9;
-    --background: #131313;
-    --foreground: #ededed;
-  }
+    :root {
+        --text-highlight: #db632b;
+        --text-base: #e9e9e9;
+        --background: #131313;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-raleway), sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-raleway), sans-serif;
 }
 
 h2 {
-  font-family: var(--font-raleway), sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
+    font-family: var(--font-raleway), sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
 }
 
 h3 {
-  font-family: var(--font-raleway), sans-serif;
-  color: var(--text-highlight);
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
+    font-family: var(--font-raleway), sans-serif;
+    color: var(--text-highlight);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
 
 @layer utilities {
     .no-scrollbar::-webkit-scrollbar {
@@ -50,5 +49,4 @@ h3 {
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
-
 }
