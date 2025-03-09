@@ -7,7 +7,7 @@ const Landing = () => {
     return (
         <div className="h-screen w-screen flex flex-row">
             <Background />
-            <div className="md:w-2/3 w-full pl-12 md:pl-36 flex flex-col justify-center md:justify-end md:gap-12 gap-24 py-36">
+            <div className="md:w-2/3 w-full pl-12 max-md:pr-12 md:pl-36 flex flex-col justify-center md:justify-end md:gap-12 gap-24 py-36">
                 <div className="relative w-full">
                     <div
                         className="bg-[#FD6F2F] md:w-82 md:h-36 h-18 w-37 absolute md:-top-12 -top-4 
@@ -31,10 +31,10 @@ const Landing = () => {
                         advertising solutions
                     </p>
                 </div>
-                <div className="flex flex-row gap-4 group">
+                <div className="flex flex-row gap-4 group max-md:justify-center">
                     <button
                         className="bg-[#95D0FD] text-[#080808] group-hover:text-[#FFFFFF] px-12 py-2 max-md:py-4 group-hover:bg-[#69a2cd] 
-                    cursor-pointer transition-all duration-300 ease-in-out max-md:w-full"
+                    cursor-pointer transition-all duration-300 ease-in-out max-md:w-4/5"
                     >
                         Get Started
                     </button>
