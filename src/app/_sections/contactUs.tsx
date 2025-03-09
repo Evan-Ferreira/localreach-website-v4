@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { sendEmail } from '../utils/sendEmail';
 
 type FormData = {
     name: string;
@@ -14,8 +13,29 @@ type FormData = {
 const ContactUs = () => {
     const { register, handleSubmit } = useForm<FormData>();
 
-    const onSubmit = (data: FormData) => {
-        sendEmail(data as any);
+    const sendEmail = async (data: FormData) => {
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to send email');
+            }
+
+            alert('Email sent successfully!');
+        } catch (error) {
+            console.error('Error sending email:', error);
+            alert('Failed to send email. Please try again.');
+        }
+    };
+
+    const onSubmit = async (data: FormData) => {
+        await sendEmail(data);
     };
 
     return (
