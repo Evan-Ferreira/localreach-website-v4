@@ -47,7 +47,7 @@ const Landing = () => {
                     />
                 </div>
             </div>
-            <div className="lg:w-1/2 w-0 h-full md:pr-36 pr-12 flex flex-row justify-end  items-end py-36">
+            <div className="hidden lg:flex lg:w-1/2 h-full md:pr-36 pr-12 py-36 flex-row justify-end items-end">
                 <VenueScrollBar />
             </div>
         </div>
