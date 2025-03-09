@@ -66,7 +66,7 @@ const Tabs: React.FC = () => {
   ];
 
   return (
-    <div className="mx-auto w-full h-screen px-4 md:px-36 bg-[#090808]">
+    <div className="mx-auto w-full h-screen px-4 md:px-36 ">
       {/* Tab Headers */}
       <div className="flex">
         {tabs.map((tab, index) => (
@@ -85,8 +85,8 @@ const Tabs: React.FC = () => {
       </div>
 
       {/* Tab Content */}
-      <div className="my-[5%] p-0 py-[5%] relative overflow-hidden">
-        <div className="h-[100vh] md:h-[50vh]">
+      <div className="my-[5%] p-0 relative overflow-hidden">
+        <div className="h-[100vh] md:h-[60vh]">
           {tabs.map((tab, index) => (
             <div
               key={index}
