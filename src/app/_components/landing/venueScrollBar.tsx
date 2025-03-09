@@ -51,7 +51,7 @@ const VenueScrollBar = () => {
     };
 
     return (
-        <div ref={scrollRef} className="h-screen flex flex-row gap-8 px-4">
+        <div ref={scrollRef} className="flex flex-row gap-8 px-4">
             <div className="h-full flex flex-col justify-center items-center relative">
                 <div className="flex flex-col justify-center items-center ">
                     {[
