@@ -7,31 +7,28 @@ const VenueScrollBar = () => {
     const [activeVenue, setActiveVenue] = useState(0);
     const scrollRef = useRef<HTMLDivElement>(null);
     const lastScrollTop = useRef(0);
-    const scrollThreshold = 100;
-    const isScrolling = useRef(false);
 
     const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-        const currentScrollTop = e.currentTarget.scrollTop;
-        const scrollDiff = currentScrollTop - lastScrollTop.current;
-        console.log('Current scroll:', currentScrollTop, 'Diff:', scrollDiff);
+        const element = e.currentTarget;
+        const currentScrollTop = element.scrollTop;
+        const maxScroll = element.scrollHeight - element.clientHeight;
+        const scrollPercentage = (currentScrollTop / maxScroll) * 100;
 
-        if (!isScrolling.current && Math.abs(scrollDiff) > scrollThreshold) {
-            isScrolling.current = true;
-            if (scrollDiff > 0) {
-                setActiveVenue((prev) => Math.min(prev + 1, 4));
-            } else {
-                setActiveVenue((prev) => Math.max(prev - 1, 0));
-            }
-            setTimeout(() => {
-                isScrolling.current = false;
-                lastScrollTop.current = currentScrollTop;
-            }, 200);
+        // Divide the scroll into 5 equal sections (0-20%, 20-40%, etc.)
+        if (scrollPercentage < 20) {
+            setActiveVenue(0);
+        } else if (scrollPercentage < 40) {
+            setActiveVenue(1);
+        } else if (scrollPercentage < 60) {
+            setActiveVenue(2);
+        } else if (scrollPercentage < 80) {
+            setActiveVenue(3);
+        } else {
+            setActiveVenue(4);
         }
-    };
 
-    useEffect(() => {
-        console.log(activeVenue);
-    }, [activeVenue]);
+        lastScrollTop.current = currentScrollTop;
+    };
 
     const getImageSize = (index: number) => {
         const diff = Math.abs(activeVenue - index);
@@ -65,7 +62,7 @@ const VenueScrollBar = () => {
                     className="absolute inset-0 h-full overflow-y-auto no-scrollbar"
                     onScroll={handleScroll}
                 >
-                    <div className="h-[1000vh]"></div>
+                    <div className="h-[300vh]"></div>
                 </div>
             </div>
             <div className="h-full flex flex-col justify-center gap-8 items-center">
