@@ -44,6 +44,15 @@ h3 {
 
 }
 
+h4{
+  font-family: var(--font-raleway), sans-serif;
+}
+
+p{
+  font-family: var(--font-raleway), sans-serif;
+  color: var(--text-base);
+}
+
 @layer utilities {
     .no-scrollbar::-webkit-scrollbar {
         display: none;
@@ -53,5 +62,4 @@ h3 {
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
-}
 }
