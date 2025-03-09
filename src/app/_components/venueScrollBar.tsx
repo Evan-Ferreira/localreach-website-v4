@@ -14,7 +14,6 @@ const VenueScrollBar = () => {
         const maxScroll = element.scrollHeight - element.clientHeight;
         const scrollPercentage = (currentScrollTop / maxScroll) * 100;
 
-        // Divide the scroll into 5 equal sections (0-20%, 20-40%, etc.)
         if (scrollPercentage < 20) {
             setActiveVenue(0);
         } else if (scrollPercentage < 40) {
@@ -32,15 +31,29 @@ const VenueScrollBar = () => {
 
     const getImageSize = (index: number) => {
         const diff = Math.abs(activeVenue - index);
-        if (diff === 0) return 250; // Active image
-        if (diff === 1) return 150; // Adjacent images
-        return 100; //`Other images
+        if (diff === 0) return 250;
+        if (diff === 1) return 150;
+        return 100;
+    };
+
+    const getDotSize = (index: number) => {
+        const diff = Math.abs(activeVenue - index);
+        if (diff === 0) return 'w-7 h-7';
+        if (diff === 1) return 'w-5 h-5';
+        return 'w-3 h-3';
+    };
+
+    const getDotColor = (index: number) => {
+        const diff = Math.abs(activeVenue - index);
+        if (diff === 0) return 'bg-[#D9D9D9]';
+        if (diff === 1) return 'bg-[#D9D9D9] opacity-80';
+        return 'bg-[#D9D9D9] opacity-50';
     };
 
     return (
         <div ref={scrollRef} className="h-screen flex flex-row gap-8 px-4">
             <div className="h-full flex flex-col justify-center items-center relative">
-                <div className="flex flex-col ">
+                <div className="flex flex-col justify-center items-center ">
                     {[
                         { src: '/fergs.svg', alt: 'fergs' },
                         { src: '/blindpig.svg', alt: 'blindpig' },
@@ -54,7 +67,7 @@ const VenueScrollBar = () => {
                             alt={image.alt}
                             width={getImageSize(index)}
                             height={getImageSize(index)}
-                            className="transition-all duration-300"
+                            className="transition-all duration-300 -mt-12"
                         />
                     ))}
                 </div>
@@ -62,18 +75,16 @@ const VenueScrollBar = () => {
                     className="absolute inset-0 h-full overflow-y-auto no-scrollbar"
                     onScroll={handleScroll}
                 >
-                    <div className="h-[300vh]"></div>
+                    <div className="h-[200vh]"></div>
                 </div>
             </div>
             <div className="h-full flex flex-col justify-center gap-8 items-center">
                 {[0, 1, 2, 3, 4].map((index) => (
                     <div
                         key={index}
-                        className={`rounded-full w-5 h-5 ${
-                            activeVenue === index
-                                ? 'bg-blue-500'
-                                : 'bg-[#D9D9D9]'
-                        }`}
+                        className={`rounded-full transition-all duration-300 ${getDotSize(
+                            index
+                        )} ${getDotColor(index)}`}
                     ></div>
                 ))}
             </div>
