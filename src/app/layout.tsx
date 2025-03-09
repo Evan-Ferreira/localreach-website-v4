@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono , Raleway } from "next/font/google";
-import "./globals.css";
-
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono, Raleway } from 'next/font/google';
+import './globals.css';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -9,8 +8,8 @@ const geistSans = Geist({
 });
 
 const raleway = Raleway({
-  variable: "--font-raleway",
-  subsets: ["latin"],
+    variable: '--font-raleway',
+    subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
@@ -28,16 +27,14 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-
-  return (
-    <html lang="en">
-      <head></head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
-
+    return (
+        <html lang="en">
+            <head></head>
+            <body
+                className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable} antialiased`}
+            >
+                {children}
+            </body>
+        </html>
+    );
 }
