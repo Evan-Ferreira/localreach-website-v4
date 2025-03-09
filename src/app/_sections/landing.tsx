@@ -10,14 +10,14 @@ const Landing = () => {
             <div className="md:w-2/3 w-full pl-12 max-md:pr-12 md:pl-36 flex flex-col justify-center md:justify-end md:gap-12 gap-24 py-36">
                 <div className="relative w-full">
                     <div
-                        className="bg-[#FD6F2F] md:w-82 md:h-36 h-18 w-37 absolute md:-top-12 -top-4 
-                    -z-10 text-7xl font-weight-700 max-md:-ml-1"
+                        className="bg-[#FD6F2F] lg:w-82 lg:h-36 h-18 w-37 absolute lg:-top-12 -top-4 
+                    -z-10 text-7xl font-weight-700 max-lg:-ml-1"
                     ></div>
 
-                    <h1 className="md:text-8xl text-[42px] font-semibold max-md:text-left">
+                    <h1 className="lg:text-8xl text-[42px] font-semibold max-md:text-left">
                         Unlock your
                     </h1>
-                    <h1 className="md:text-8xl text-[42px] font-semibold max-md:text-left">
+                    <h1 className="lg:text-8xl text-[42px] font-semibold max-md:text-left">
                         TV Advertising
                     </h1>
                 </div>
