@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Button from '../_components/Button';
+
 const Tabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
 
@@ -9,11 +10,11 @@ const Tabs: React.FC = () => {
     {
       label: 'For Advertisers',
       content: (
-        <div className="p-6 text-[var(--text-base)] h-full">
-          <div className="flex">
+        <div className="p-4 md:p-6 text-[var(--text-base)] h-full">
+          <div className="flex flex-col md:flex-row">
             <div>
-            <h3 className="pb-2"> Advertisers </h3>
-              <h2 className="text-3xl font-bold mb-4 uppercase">Transform Your Venue</h2>
+              <h3 className="pb-2"> Advertisers </h3>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 uppercase">Transform Your Venue</h2>
               <p className="mb-8">
                 Democratizing TV Advertising. Challenging Corporate Dominance. Empower your reach.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis felis non libero
@@ -26,7 +27,7 @@ const Tabs: React.FC = () => {
               alt="Restaurant digital display showcase"
               width={500}
               height={400}
-              className="rounded-lg shadow-lg ml-8"
+              className="rounded-lg shadow-lg mt-4 md:mt-0 md:ml-8"
               priority
             />
           </div>
@@ -36,11 +37,11 @@ const Tabs: React.FC = () => {
     {
       label: 'For Restaurants',
       content: (
-        <div className="p-6 text-[var(--text-base)] h-full">
-          <div className="flex">
+        <div className="p-4 md:p-6 text-[var(--text-base)] h-full">
+          <div className="flex flex-col md:flex-row">
             <div>
-              <h3 className="pb-2"> Resturants </h3>
-              <h2 className="text-3xl font-bold mb-4">Enhance Your Dining Experience</h2>
+              <h3 className="pb-2"> Restaurants </h3>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Enhance Your Dining Experience</h2>
               <p className="mb-8">
                 Elevate your restaurant&apos;s ambiance with cutting-edge technology. Engage your customers
                 with interactive displays and personalized content. Lorem ipsum dolor sit amet, consectetur
@@ -54,7 +55,7 @@ const Tabs: React.FC = () => {
                 alt="Restaurant digital display showcase"
                 width={400}
                 height={400}
-                className="rounded-lg shadow-lg ml-8"
+                className="rounded-lg shadow-lg mt-4 md:mt-0 md:ml-8"
                 priority
               />
             </div>
@@ -85,25 +86,25 @@ const Tabs: React.FC = () => {
 
       {/* Tab Content */}
       <div className="my-[5%] p-0 py-[5%] relative overflow-hidden">
-        <div className="h-[50vh]">
-        {tabs.map((tab, index) => (
-          <div
-            key={index}
-            className={`transition-all duration-500 ease-in-out absolute w-full 
-              ${index === activeTab 
-                ? 'translate-x-0 opacity-100' 
-                : index < activeTab
-                  ? '-translate-x-full opacity-0'
-                  : 'translate-x-full opacity-0'
-              }`}
-          >
-            {tab.content}
-          </div>
-        ))}
-      </div>
+        <div className="h-[100vh] md:h-[50vh]">
+          {tabs.map((tab, index) => (
+            <div
+              key={index}
+              className={`transition-all duration-500 ease-in-out absolute w-full 
+                ${index === activeTab 
+                  ? 'translate-x-0 opacity-100' 
+                  : index < activeTab
+                    ? '-translate-x-full opacity-0'
+                    : 'translate-x-full opacity-0'
+                }`}
+            >
+              {tab.content}
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className="mx-0 h-[3px] w-full bg-[var(--text-highlight)] px-0"></div>
+      <div className="mx-0 h-[3px] w-full bg-[var(--text-highlight)]"></div>
     </div>
   );
 };
