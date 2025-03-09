@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #131313;
 }
 
 @theme inline {
@@ -14,7 +14,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --text-highlight: #db632b;
+    --text-base: #E9E9E9;
+    --background: #131313;
     --foreground: #ededed;
   }
 }
@@ -22,5 +24,19 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-raleway), sans-serif;
+}
+
+h2 {
+  font-family: var(--font-raleway), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+h3 {
+  font-family: var(--font-raleway), sans-serif;
+  color: var(--text-highlight);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  
 }
