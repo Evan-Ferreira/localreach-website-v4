@@ -9,7 +9,7 @@ const Tabs: React.FC = () => {
     {
       label: 'For Advertisers',
       content: (
-        <div className="p-6 text-white h-full">
+        <div className="p-6 text-[var(--text-base)] h-full">
           <div className="flex">
             <div>
             <h3 className="pb-2"> Advertisers </h3>
@@ -36,7 +36,7 @@ const Tabs: React.FC = () => {
     {
       label: 'For Restaurants',
       content: (
-        <div className="p-6 text-white h-full">
+        <div className="p-6 text-[var(--text-base)] h-full">
           <div className="flex">
             <div>
               <h3 className="pb-2"> Resturants </h3>
