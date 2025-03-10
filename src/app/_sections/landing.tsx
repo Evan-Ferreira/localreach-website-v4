@@ -7,20 +7,21 @@ const Landing = () => {
     return (
         <div className="h-screen w-screen flex flex-row">
             <Background />
-            <div className="md:w-2/3 w-full pl-12 max-md:pr-12 md:pl-36 flex flex-col justify-center md:justify-end md:gap-12 gap-24 py-36">
+            <div className="md:w-2/3 w-full pl-12 max-md:pr-12 md:pl-36 flex flex-col justify-center md:justify-end md:gap-12 gap-24 py-12">
                 <div className="relative w-full">
                     <div
-                        className="bg-[#FD6F2F] lg:w-82 lg:h-36 h-18 w-37 absolute lg:-top-12 -top-4 
+                        className="bg-[#FD6F2F] lg:w-63 lg:h-32 h-18 w-37 absolute lg:-top-8 -top-4 
                     -z-10 text-7xl font-weight-700 max-lg:-ml-1"
                     ></div>
 
-                    <h1 className="lg:text-8xl text-[42px] font-semibold max-md:text-left">
+                    <h1 className="lg:text-[4.6rem] text-[42px] font-semibold max-md:text-left">
                         Unlock your
                     </h1>
-                    <h1 className="lg:text-8xl text-[42px] font-semibold max-md:text-left">
+                    <h1 className="lg:text-[4.6rem] text-[42px] font-semibold max-md:text-left">
                         TV Advertising
                     </h1>
                 </div>
+                ``
                 <div className="flex flex-col md:flex-row max-md:gap-12">
                     <p className="w-full md:w-1/3 max-md:text-center">
                         Connect with local businesses through innovative
@@ -47,7 +48,7 @@ const Landing = () => {
                     />
                 </div>
             </div>
-            <div className="hidden lg:flex lg:w-1/2 h-full md:pr-36 pr-12 py-36 flex-row justify-end items-end">
+            <div className="hidden lg:flex lg:w-1/2 h-full md:pr-36 pr-12 py-12 flex-row justify-end items-end">
                 <VenueScrollBar />
             </div>
         </div>
