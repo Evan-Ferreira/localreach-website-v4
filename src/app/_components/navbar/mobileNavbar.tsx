@@ -6,7 +6,7 @@ const MobileNavbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <>
-            <div className="max-md:flex hidden absolute flex-row justify-end items-center w-full h-14">
+            <div className="max-lg:flex hidden absolute flex-row justify-end items-center w-full h-14">
                 <img
                     src="/navbar-btn.svg"
                     alt="navbar-btn"
