@@ -7,7 +7,7 @@ const Landing = () => {
     return (
         <div className="h-screen w-screen flex flex-row">
             <Background />
-            <div className="md:w-2/3 w-full pl-12 max-md:pr-12 md:pl-36 flex flex-col justify-center md:justify-end md:gap-12 gap-24 py-12">
+            <div className="md:w-2/3 w-full pl-12 max-md:pr-12 md:pl-36 flex flex-col justify-center md:justify-end md:gap-12 gap-24 pb-12">
                 <div className="relative w-full">
                     <div
                         className="bg-[#FD6F2F] lg:w-63 lg:h-32 h-18 w-37 absolute lg:-top-8 -top-4 
@@ -48,7 +48,7 @@ const Landing = () => {
                     />
                 </div>
             </div>
-            <div className="hidden lg:flex lg:w-1/2 h-full md:pr-36 pr-12 py-12 flex-row justify-end items-end">
+            <div className="hidden lg:flex lg:w-1/2 h-full md:pr-36 pr-12 pb-12 flex-row justify-end items-end">
                 <VenueScrollBar />
             </div>
         </div>
