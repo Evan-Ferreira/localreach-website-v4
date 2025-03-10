@@ -69,8 +69,8 @@ const ImageScrollBar = () => {
     ];
 
     return (
-        <div className='h-1/2 w-full'>
-            <div ref={scrollRef} className="relative flex flex-row gap-8">
+        <div className=' w-full'>
+            <div ref={scrollRef} className="relative max-h-[400px] flex flex-row gap-8">
                 <div
                         className="absolute inset-0 z-1000 h-full w-full overflow-y-auto no-scrollbar"
                         onScroll={handleScroll}
@@ -83,11 +83,11 @@ const ImageScrollBar = () => {
                         alt={images[activeImage].alt}
                         width={250}
                         height={250}
-                        className={`transition-all w-full h-[70vh] duration-300 rounded-md object-cover my-auto ${imageOpacity}`}
+                        className={`transition-all w-full min-h-full duration-300 rounded-md object-cover my-auto ${imageOpacity}`}
                     />
                 
                 </div>
-                <div className="h-[75vh] ml-10 w-full flex flex-col justify-center relative">
+                <div className="h-[400px] ml-10 w-full flex flex-col justify-center relative">
                     {components.map((component, index) => (
                         <div
                             key={index}
