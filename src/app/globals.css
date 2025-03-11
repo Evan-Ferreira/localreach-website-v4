@@ -19,6 +19,7 @@
         --text-secondary: #9E9E9E;
         --background: #131313;
         --foreground: #ededed;
+        --button-blue: #95d0fd;
     }
 }
 
@@ -37,12 +38,10 @@ h2 {
 }
 
 h3 {
-
-  font-family: var(--font-raleway), sans-serif;
-  color: var(--text-highlight);
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-
+    font-family: var(--font-raleway), sans-serif;
+    color: var(--text-highlight);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
 }
 
 h4{
