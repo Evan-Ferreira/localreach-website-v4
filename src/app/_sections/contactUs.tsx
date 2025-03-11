@@ -69,21 +69,21 @@ const ContactUs = () => {
                         {...register('email')}
                         type="email"
                         placeholder="Email:"
-                        className="border border-[var(--text-base)] text-[var(--text-base)] placeholder:text-[var(--text-base)] 
+                        className="border border-[var(--text-secondary)] text-[var(--text-base)] placeholder:text-[var(--text-secondary)] 
                         rounded-md py-3 px-2"
                     />
                     <input
                         {...register('phone')}
                         type="text"
                         placeholder="Phone Number:"
-                        className="border border-[var(--text-base)] text-[var(--text-base)] placeholder:text-[var(--text-base)] 
+                        className="border border-[var(--text-secondary)] text-[var(--text-base)] placeholder:text-[var(--text-secondary)] 
                         rounded-md py-3 px-2"
                     />
                     <input
                         {...register('message')}
                         type="text"
                         placeholder="Message:"
-                        className="border border-[var(--text-base)] text-[var(--text-base)] placeholder:text-[var(--text-base)] 
+                        className="border border-[var(--text-secondary)] text-[var(--text-base)] placeholder:text-[var(--text-secondary)] 
                         rounded-md py-3 px-2"
                     />
                     <div className="flex justify-center">
