@@ -9,7 +9,7 @@ const HowItWorks: React.FC = () => {
             <h4 className="text-md text-gray-500 mb-8">
                 No new work. We&apos;ll get you live within 30 days. Easy installation 100% hassle free.
             </h4>
-            <div className='bg-[#212121] bg-opacity-100 p-8 rounded'>
+            <div className='bg-[#212121] h-fit bg-opacity-100 p-8 rounded'>
                 <ListSection></ListSection>
             </div>
         </div>

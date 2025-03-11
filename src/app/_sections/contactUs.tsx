@@ -50,9 +50,9 @@ const ContactUs = () => {
                     <h2 className="text-4xl font-bold tracking-tighters">
                         CONTACT US
                     </h2>
-                    <p className="text-lg">
+                    <h4 className="text-md text-gray-500 mb-8">
                         Reach out for personalized solutions or to connect!
-                    </p>
+                    </h4>
                 </div>
                 <form
                     onSubmit={handleSubmit(onSubmit)}
@@ -62,7 +62,7 @@ const ContactUs = () => {
                         {...register('name')}
                         type="text"
                         placeholder="Name:"
-                        className="border border-[var(--text-base)] text-[var(--text-base)] placeholder:text-[var(--text-base)] 
+                        className="border border-[var(--text-secondary)] text-[var(--text-base)] placeholder:text-[var(--text-secondary)] 
                         rounded-md py-3 px-2"
                     />
                     <input
