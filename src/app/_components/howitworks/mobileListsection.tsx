@@ -1,6 +1,6 @@
 
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 const MobileListSection = () => {
@@ -27,28 +27,45 @@ const MobileImageScrollView = () => {
   };
 
   const images = [
-    { src: '/tv1.jfif', alt: 'image1' },
-    { src: '/tv2.jfif', alt: 'image2' },
-    { src: '/tv3.jfif', alt: 'image3' },
+    { src: '/HIW1.png', alt: 'image1' },
+    { src: '/HIW2.mp4', alt: 'image2' },
+    { src: '/HIW3.jpg', alt: 'image3' },
   ];
-
   const steps = [
     {
       number: "01",
-      title: "Submit Your Project",
-      description: "Fill out our simple form with your project details and requirements. We'll get back to you within 24 hours."
+      title: "Sign Up & Install Your Device",
+      description: (
+        <>
+          Register your restaurant with Local Reach and receive our easy-to-install IoT device. 
+          <strong> Simply plug it into your existing TV setup, and our system will seamlessly integrate with your screens—no technical expertise required.</strong>
+        </>
+      )
     },
     {
       number: "02",
-      title: "We Review",
-      description: "Our team carefully analyzes your project and creates a customized plan. We'll schedule a call to discuss our approach."
+      title: "AI-Powered Ad Replacement",
+      description: (
+        <>
+          Our smart AI technology detects commercials in real time and 
+          <strong> replaces them with ads of your choice.</strong> 
+          Whether promoting your menu, special deals, or partner brands, you stay in full control of what appears on your screens.
+        </>
+      )
     },
     {
       number: "03",
-      title: "Get Started",
-      description: "Once approved, we begin implementation immediately. Your project will be live within 30 days."
+      title: "Earn Revenue Effortlessly",
+      description: (
+        <>
+          Turn your existing screens into a new revenue stream. 
+          <strong> With every ad displayed, your restaurant earns passive income,</strong> 
+          while keeping customers engaged with relevant and localized content—all without lifting a finger.
+        </>
+      )
     }
-  ];
+];
+
 
   return (
     <div className="flex flex-col items-center w-full h-128">
@@ -80,7 +97,7 @@ const MobileImageScrollView = () => {
       </div>
       
       {/* Step content */}
-      <div className="w-full bg-[#2121218f] rounded-lg">
+      <div className="w-full rounded-lg">
         <div className="items-center gap-3 mb-4">
           <span className="text-[var(--text-highlight)] text-sm font-semibold">
             {steps[activeIndex].number}

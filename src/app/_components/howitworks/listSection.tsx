@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
+import ImageVideoLoader from './imageVideoLoader';
 
 const ListSection = () => {
     return (
@@ -57,9 +57,9 @@ const ImageScrollBar = () => {
     }, [activeImage]);
 
     const images = [
-        { src: '/tv1.jfif', alt: 'image1' },
-        { src: '/tv2.jfif', alt: 'image2' },
-        { src: '/tv3.jfif', alt: 'image3' },
+        { src: '/HIW1.png', alt: 'image1' },
+        { src: '/HIW2.mp4', alt: 'image2' },
+        { src: '/HIW3.jpg', alt: 'image3' },
     ];
 
     const components = [
@@ -77,12 +77,12 @@ const ImageScrollBar = () => {
                     >
                         <div className="h-[200vh] "></div>
                 </div>
-                <div className="min-h-full min-w-1/2 flex flex-col justify-center items-left relative">
-                    <Image
+                <div className="min-h-full min-w-1/2 w-1/2 flex flex-col justify-center items-left relative">
+                    <ImageVideoLoader
                         src={images[activeImage].src}
                         alt={images[activeImage].alt}
-                        width={250}
-                        height={250}
+                        width={1000}
+                        height={1000}
                         className={`transition-all w-full min-h-full duration-300 rounded-md object-cover my-auto ${imageOpacity}`}
                     />
                 
@@ -103,29 +103,71 @@ const ImageScrollBar = () => {
         </div>
     );
 };
-
 const DemocratizingTV = () => (
-    <div className=" items-center space-x-4">
-        <span className="text-[var(--text-highlight)]  text-[0.7rem]">01</span>
-        <h3 className='text-lg font-Bold'>Submit Your Project</h3>
-        <p className='text-sm'>Fill out our simple form with your project details and requirements. We&apos;ll get back to you within 24 hours.</p>
+    <div className="p-5 mb-4">
+        <div className="flex items-center mb-3">
+            <span className="text-orange-500 text-2xl font-bold mr-3">01</span>
+            <h3 className="text-xl font-bold">Sign Up & Install</h3>
+        </div>
+        <div className="ml-8 text-white space-y-2">
+            <div className="flex items-start">
+                <span className="text-orange-500 mr-2">•</span>
+                <p>Register with Local Reach</p>
+            </div>
+            <div className="flex items-start">
+                <span className="text-orange-500 mr-2">•</span>
+                <p>Receive our plug-and-play device</p>
+            </div>
+            <div className="flex items-start">
+                <span className="text-orange-500 mr-2">•</span>
+                <p>No technical expertise required</p>
+            </div>
+        </div>
     </div>
 );
 
 const InnovativeSolutions = () => (
-    <div className=" items-center space-x-4">
-        <span className="text-[var(--text-highlight)]  text-[0.7rem] ">02</span>
-        <h3 className='text-lg font-Bold'>We Review</h3>
-        <p className='text-sm'>Our team carefully analyzes your project and creates a customized plan. We&apos;ll schedule a call to discuss our approach.</p>
+    <div className="p-5 mb-4">
+        <div className="flex items-center mb-3">
+            <span className="text-orange-500 text-2xl font-bold mr-3">02</span>
+            <h3 className="text-xl font-bold">Smart Ad Technology</h3>
+        </div>
+        <div className="ml-8 text-white space-y-2">
+          
+        <div className="flex items-start">
+                <span className="text-orange-500 mr-2">•</span>
+                <p>Detects commercials in real time</p>
+            </div>
+            <div className="flex items-start">
+                <span className="text-orange-500 mr-2">•</span>
+                <p>Replaces with your chosen content</p>
+            </div>
+            <div className="flex items-start">
+                <span className="text-orange-500 mr-2">•</span>
+                <p>You maintain full control</p>
+            </div>
+        </div>
     </div>
 );
 
 const ReachAudience = () => (
-    <div className=" items-center space-x-4">
-        <span className="text-[var(--text-highlight)] text-[0.7rem]">03</span>
-        <h3 className='text-lg font-Bold'>Get Started</h3>
-        <p className='text-sm'>Once approved, we begin implementation immediately. Your project will be live within 30 days.</p>
+    <div className="p-5 mb-4">
+        <div className="flex items-center mb-3">
+            <span className="text-orange-500 text-2xl font-bold mr-3">03</span>
+            <h3 className="text-xl font-bold">Earn Revenue</h3>
+        </div>
+        <div className="ml-8 text-white space-y-2">
+           
+            <div className="flex items-start">
+                <span className="text-orange-500 mr-2">•</span>
+                <p>Convert TVs into revenue sources</p>
+            </div>
+            <div className="flex items-start">
+                <span className="text-orange-500 mr-2">•</span>
+                <p>Earn passive income with each ad</p>
+            </div>
+            
+        </div>
     </div>
 );
-
 export default ListSection;
