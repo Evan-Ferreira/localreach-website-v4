@@ -20,7 +20,7 @@ const Blob = ({
             requestAnimationFrame(() => {
                 setPosition({
                     x: event.clientX - parseInt(size) / 2,
-                    y: event.clientY - parseInt(size) / 2,
+                    y: event.clientY - parseInt(size),
                 });
             });
         };
