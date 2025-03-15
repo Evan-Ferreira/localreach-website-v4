@@ -20,7 +20,7 @@ const Navbar = () => {
                                     ?.scrollIntoView({ behavior: 'smooth' });
                             }}
                         >
-                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:text-[var(--text-highlight)]">
+                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:text-[var(--text-highlight)] ease-in-out duration-300 transition-all">
                                 Why Local Reach?
                             </p>
                         </Link>
@@ -33,7 +33,7 @@ const Navbar = () => {
                                     ?.scrollIntoView({ behavior: 'smooth' });
                             }}
                         >
-                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:text-[var(--text-highlight)]">
+                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:text-[var(--text-highlight)] ease-in-out duration-300 transition-all">
                                 How it Works
                             </p>
                         </Link>
@@ -46,7 +46,7 @@ const Navbar = () => {
                                     ?.scrollIntoView({ behavior: 'smooth' });
                             }}
                         >
-                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:text-[var(--text-highlight)]">
+                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:text-[var(--text-highlight)] ease-in-out duration-300 transition-all">
                                 Learn More
                             </p>
                         </Link>
@@ -59,7 +59,7 @@ const Navbar = () => {
                                     ?.scrollIntoView({ behavior: 'smooth' });
                             }}
                         >
-                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:text-[var(--text-highlight)]">
+                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:text-[var(--text-highlight)] ease-in-out duration-300 transition-all">
                                 Blog
                             </p>
                         </Link>
