@@ -10,9 +10,9 @@ const Tabs: React.FC = () => {
     {
       label: 'For Advertisers',
       content: (
-        <div className="p-4 md:p-6 text-[var(--text-base)] h-full ">
+        <div className=" text-[var(--text-base)] h-full">
           <div className="flex flex-col md:flex-row">
-            <div>
+            <div className="p-4 md:pr-24 md:p-2">
               <h3 className="pb-2"> Advertisers </h3>
               <h2 className="text-2xl md:text-3xl font-bold mb-4 uppercase">Transform Your Venue</h2>
               <p className="mb-8">
@@ -22,14 +22,16 @@ const Tabs: React.FC = () => {
               </p>
               <Button onClick={() => window.location.href = 'https://example.com'}>Explore Services</Button>
             </div>
+            <div className="w-full h-full flex items-center justify-center">
             <Image
               src="/Kingston_Ontario_Canada_-_Laslovarga_(28).jfif"
               alt="Restaurant digital display showcase"
-              width={500}
+              width={400}
               height={400}
-              className="rounded-lg shadow-lg mt-4 md:mt-0 md:ml-8"
+              className="w-full h-full rounded-lg shadow-lg object-cover mt-4 md:mt-0"
               priority
             />
+            </div>
           </div>
         </div>
       ),
@@ -37,9 +39,9 @@ const Tabs: React.FC = () => {
     {
       label: 'For Restaurants',
       content: (
-        <div className="p-4 md:p-6 text-[var(--text-base)] h-full">
-          <div className="flex flex-col md:flex-row">
-            <div>
+        <div className="text-[var(--text-base)] h-full">
+          <div className="flex flex-col h-full md:flex-row ">
+            <div className="p-4 md:pr-24 md:p-2">
               <h3 className="pb-2"> Restaurants </h3>
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Enhance Your Dining Experience</h2>
               <p className="mb-8">
@@ -49,13 +51,13 @@ const Tabs: React.FC = () => {
               </p>
               <Button onClick={() => window.location.href = 'https://example.com'}> Discover More </Button>
             </div>
-            <div className="min-w-1/2">
+            <div className="w-full h-full flex items-center justify-center ">
               <Image
                 src="/resturant.jfif"
                 alt="Restaurant digital display showcase"
                 width={400}
                 height={400}
-                className="rounded-lg shadow-lg mt-4 md:mt-0 md:ml-8"
+                className="w-full h-full rounded-lg shadow-lg object-cover mt-4 md:mt-0"
                 priority
               />
             </div>
@@ -90,7 +92,7 @@ const Tabs: React.FC = () => {
           {tabs.map((tab, index) => (
             <div
               key={index}
-              className={`transition-all duration-500 ease-in-out absolute w-full 
+              className={`transition-all duration-500 ease-in-out absolute w-full  h-full
                 ${index === activeTab 
                   ? 'translate-x-0 opacity-100' 
                   : index < activeTab
