@@ -6,7 +6,7 @@ const MobileNavbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <>
-            <div className="max-lg:flex hidden absolute flex-row justify-end items-center w-full h-14">
+            <div className="max-lg:flex hidden absolute flex-row justify-end items-center w-full h-14 z-100">
                 <img
                     src="/navbar-btn.svg"
                     alt="navbar-btn"
@@ -14,9 +14,8 @@ const MobileNavbar = () => {
                     onClick={() => setIsOpen(!isOpen)}
                 />
             </div>
-
             <div
-                className={`absolute flex flex-col w-full z-10 transition-all duration-300 ease-in-out ${
+                className={`absolute flex flex-col w-full z-100 transition-all duration-300 ease-in-out ${
                     isOpen
                         ? 'opacity-100 translate-y-0 h-screen bg-[#131313e5] p-12 gap-12'
                         : 'opacity-0 -translate-y-full h-0 overflow-hidden'
