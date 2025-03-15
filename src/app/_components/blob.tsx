@@ -20,7 +20,7 @@ const Blob = ({
             requestAnimationFrame(() => {
                 setPosition({
                     x: event.clientX - parseInt(size) / 2,
-                    y: event.clientY - parseInt(size),
+                    y: event.clientY - parseInt(size) * 1.3,
                 });
             });
         };
@@ -50,7 +50,7 @@ const Blob = ({
                 height: size,
                 width: size,
                 filter: 'blur(160px)',
-                opacity: '20%',
+                opacity: '10%',
                 background: color,
                 pointerEvents: 'none',
                 zIndex: 50,
