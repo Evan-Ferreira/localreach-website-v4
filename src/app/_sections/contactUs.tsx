@@ -39,7 +39,10 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="w-screen h-screen bg-[var(--background)] flex flex-row lg:px-36 px-12 py-12 justify-center items-center gap-36">
+        <div
+            id="learn-more"
+            className="w-screen h-screen bg-[var(--background)] flex flex-row lg:px-36 px-12 py-12 justify-center items-center gap-36"
+        >
             <img
                 src="/taiv-evan-joseph.jpg"
                 alt="taiv-evan-joseph"
