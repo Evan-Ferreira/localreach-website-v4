@@ -65,7 +65,8 @@ const Navbar = () => {
                         </Link>
                     </div>
                     <button
-                        className="bg-[var(--button-blue)] w-96 h-9/10 text-[var(--background)]"
+                        className="bg-[var(--button-blue)] w-72 h-9/10 text-[var(--background)] hover:cursor-pointer hover:text-[#FFFFFF]
+                         hover:bg-[#69a2cd] transition-all duration-300 ease-in-out"
                         onClick={() => {
                             document
                                 .getElementById('learn-more')
