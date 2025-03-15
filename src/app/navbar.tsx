@@ -12,7 +12,7 @@ const Navbar = () => {
                         <p className="2xl:text-lg text-md">Learn More</p>
                         <p className="2xl:text-lg text-md">Blog</p>
                     </div>
-                    <button className="bg-[var(--button-blue)] w-96 h-9/10 text-[var(--background)]">
+                    <button className="bg-[var(--button-blue)] px-12 py-4 whitespace-nowrap text-[var(--background)]">
                         Contact Us
                     </button>
                 </div>
