@@ -70,7 +70,7 @@ const ImageScrollBar = () => {
 
     return (
         <div className=' w-full'>
-            <div ref={scrollRef} className="relative max-h-[400px] flex flex-row gap-8">
+            <div ref={scrollRef} className="relative max-h-[500px] flex flex-row gap-8">
                 <div
                         className="absolute inset-0 z-1000 h-full w-full overflow-y-auto no-scrollbar"
                         onScroll={handleScroll}
@@ -87,7 +87,7 @@ const ImageScrollBar = () => {
                     />
                 
                 </div>
-                <div className="h-[400px] ml-10 w-full flex flex-col justify-center relative">
+                <div className="h-[500px] ml-10 w-full flex flex-col justify-center relative">
                     {components.map((component, index) => (
                         <div
                             key={index}

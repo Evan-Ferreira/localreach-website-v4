@@ -33,7 +33,7 @@ const Tabs: React.FC = () => {
                                 Explore Services
                             </Button>
                         </div>
-                        <div className="w-full h-full flex items-center justify-center">
+                        <div className="w-full h-[300px] md:h-full flex items-center justify-center">
                             <Image
                                 src="/Kingston_Ontario_Canada_-_Laslovarga_(28).jfif"
                                 alt="Restaurant digital display showcase"
@@ -74,11 +74,11 @@ const Tabs: React.FC = () => {
                                 Discover More{' '}
                             </Button>
                         </div>
-                        <div className="w-full h-full flex items-center justify-center ">
+                        <div className="w-full h-[300px] md:h-full flex items-center justify-center">
                             <Image
                                 src="/resturant.jfif"
                                 alt="Restaurant digital display showcase"
-                                width={400}
+                                width={400} 
                                 height={400}
                                 className="w-full h-full rounded-lg shadow-lg object-cover mt-4 md:mt-0"
                                 priority
@@ -93,7 +93,7 @@ const Tabs: React.FC = () => {
     return (
         <div
             id="why-local-reach"
-            className="mx-auto w-full h-screen px-4 md:px-36 relative z-100 "
+            className="mx-auto w-full min-h-screen px-4 md:px-36 relative z-100 "
         >
             {/* Tab Headers */}
             <div className="flex relative z-100">
@@ -114,11 +114,11 @@ const Tabs: React.FC = () => {
 
             {/* Tab Content */}
             <div className="my-[5%] p-0 relative overflow-hidden">
-                <div className="h-[100vh] md:h-[60vh]">
+                <div className="h-[86vh] md:h-[60vh]">
                     {tabs.map((tab, index) => (
                         <div
                             key={index}
-                            className={`transition-all duration-500 ease-in-out absolute w-full  h-full
+                            className={`transition-all duration-500 ease-in-out absolute w-full h-full 
                 ${
                     index === activeTab
                         ? 'translate-x-0 opacity-100'
@@ -133,7 +133,7 @@ const Tabs: React.FC = () => {
                 </div>
             </div>
 
-            <div className="mx-0 h-[3px] w-full bg-[var(--text-highlight)]"></div>
+            <div className="mx-0 h-[3px]  md:mb-0 w-full bg-[var(--text-highlight)]"></div>
         </div>
     );
 };
