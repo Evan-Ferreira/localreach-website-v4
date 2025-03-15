@@ -68,9 +68,9 @@ const Tabs: React.FC = () => {
   ];
 
   return (
-    <div className="mx-auto w-full h-screen px-4 md:px-36 ">
+    <div className="mx-auto w-full h-screen px-4 md:px-36 relative z-100 ">
       {/* Tab Headers */}
-      <div className="flex">
+      <div className="flex relative z-100">
         {tabs.map((tab, index) => (
           <button
             key={index}

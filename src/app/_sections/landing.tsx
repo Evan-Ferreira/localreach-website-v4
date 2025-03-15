@@ -5,7 +5,7 @@ import VenueScrollBar from '../_components/landing/venueScrollBar';
 
 const Landing = () => {
     return (
-        <div className="h-screen w-screen flex flex-row">
+        <div className="h-screen w-screen flex flex-row z-100">
             <Background />
             <div className="md:w-2/3 w-full pl-12 max-md:pr-12 md:pl-36 flex flex-col justify-center md:justify-end md:gap-8 gap-24 pb-12">
                 <div className="relative w-full">
