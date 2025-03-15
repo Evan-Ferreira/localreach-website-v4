@@ -38,7 +38,10 @@ const blogPosts: BlogPost[] = [
 
 const Blog = () => {
     return (
-        <div className="w-full min-h-screen bg-[var(--background)] py-16 px-36 ">
+        <div
+            id="blog"
+            className="w-full min-h-screen bg-[var(--background)] py-16 px-36 "
+        >
             <div className="text-center mb-12  relative z-100">
                 <h2 className="text-4xl font-bold mb-4">Latest Updates</h2>
                 <h4 className="text-md text-gray-500 mb-8">

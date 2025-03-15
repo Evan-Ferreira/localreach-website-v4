@@ -3,7 +3,10 @@ import ListSection from '../_components/howitworks/listSection';
 
 const HowItWorks: React.FC = () => {
     return (
-        <div className="h-full w-full bg-[var(--background)] py-12 px-36 ">
+        <div
+            id="how-it-works"
+            className="h-full w-full bg-[var(--background)] py-12 px-36 "
+        >
             <div className="text-center pb-8  relative z-100">
                 <h2 className="text-4xl font-bold text-white mb-4">
                     How It Works

@@ -91,7 +91,10 @@ const Tabs: React.FC = () => {
     ];
 
     return (
-        <div className="mx-auto w-full h-screen px-4 md:px-36 relative z-100 ">
+        <div
+            id="why-local-reach"
+            className="mx-auto w-full h-screen px-4 md:px-36 relative z-100 "
+        >
             {/* Tab Headers */}
             <div className="flex relative z-100">
                 {tabs.map((tab, index) => (
