@@ -13,9 +13,9 @@ type FormData = {
 const ContactUs = () => {
     const { register, handleSubmit } = useForm<FormData>();
 
-    const sendEmail = async (data: FormData) => {
+    const sendText = async (data: FormData) => {
         try {
-            const response = await fetch('/api/send-email', {
+            const response = await fetch('/api/send-text', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -24,18 +24,18 @@ const ContactUs = () => {
             });
 
             if (!response.ok) {
-                throw new Error('Failed to send email');
+                throw new Error('Failed to send message');
             }
 
-            alert('Email sent successfully!');
+            alert('Message sent successfully!');
         } catch (error) {
-            console.error('Error sending email:', error);
-            alert('Failed to send email. Please try again.');
+            console.error('Error sending message:', error);
+            alert('Failed to send message. Please try again.');
         }
     };
 
     const onSubmit = async (data: FormData) => {
-        await sendEmail(data);
+        await sendText(data);
     };
 
     return (
