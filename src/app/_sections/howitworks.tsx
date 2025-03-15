@@ -1,8 +1,6 @@
 import React from 'react';
 import ListSection from '../_components/howitworks/listSection';
 
-// TODO: test
-
 const HowItWorks: React.FC = () => {
     return (
         <div className="h-screen w-full bg-[var(--background)] py-[5%] px-36">
