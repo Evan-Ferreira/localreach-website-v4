@@ -89,7 +89,8 @@ const ContactUs = () => {
                     <div className="flex justify-center">
                         <button
                             type="submit"
-                            className="bg-[var(--text-highlight)] text-[var(--text-base)] font-semibold text-md py-3.5 w-[180px] relative z-100"
+                            className="bg-[var(--text-highlight)] text-[var(--text-base)] font-semibold text-md 
+                            py-3.5 w-[180px] relative z-100 hover:cursor-pointer hover:bg-orange-600"
                         >
                             Submit
                         </button>
