@@ -10,9 +10,17 @@ const Navbar = () => {
             <div className="hidden lg:flex absolute w-full h-14 flex-row justify-center z-100">
                 <div className="flex flex-row px-36 mt-12 justify-between 2xl:gap-38 gap-10 h-full w-full items-center">
                     <img src="/lr-logo.svg" alt="logo" className="h-4/5" />
-                    <div className="flex flex-row bg-[#FFFFFF4D] gap-6 px-16 w-full h-full rounded-full justify-around items-center">
-                        <Link href="#why-local-reach">
-                            <p className="2xl:text-lg text-md">
+                    <div className="flex flex-row gap-6 px-16 w-full bg-[#FFFFFF4D] h-4/5 rounded-full justify-around items-center">
+                        <Link
+                            href="#why-local-reach"
+                            scroll={false}
+                            onClick={() => {
+                                document
+                                    .getElementById('why-local-reach')
+                                    ?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                        >
+                            <p className="2xl:text-md text-sm hover:cursor-pointer text-black hover:font-bold">
                                 Why Local Reach?
                             </p>
                         </Link>
@@ -25,7 +33,9 @@ const Navbar = () => {
                                     ?.scrollIntoView({ behavior: 'smooth' });
                             }}
                         >
-                            <p className="2xl:text-lg text-md">How it Works</p>
+                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:font-bold">
+                                How it Works
+                            </p>
                         </Link>
                         <Link
                             href="#learn-more"
@@ -36,7 +46,9 @@ const Navbar = () => {
                                     ?.scrollIntoView({ behavior: 'smooth' });
                             }}
                         >
-                            <p className="2xl:text-lg text-md">Learn More</p>
+                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:font-bold">
+                                Learn More
+                            </p>
                         </Link>
                         <Link
                             href="#blog"
@@ -47,7 +59,9 @@ const Navbar = () => {
                                     ?.scrollIntoView({ behavior: 'smooth' });
                             }}
                         >
-                            <p className="2xl:text-lg text-md">Blog</p>
+                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:font-bold">
+                                Blog
+                            </p>
                         </Link>
                     </div>
                     <button
