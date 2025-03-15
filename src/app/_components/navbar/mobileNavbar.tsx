@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const MobileNavbar = () => {
@@ -30,10 +31,50 @@ const MobileNavbar = () => {
                     />
                 </div>
                 <div className="flex flex-col gap-12 mt-12 items-center">
-                    <p>Why Local Reach?</p>
-                    <p>How it Works</p>
-                    <p>Learn More</p>
-                    <p>Blog</p>
+                    <Link
+                        href="#why-local-reach"
+                        scroll={false}
+                        onClick={() => {
+                            document
+                                .getElementById('why-local-reach')
+                                ?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                    >
+                        <p>Why Local Reach?</p>
+                    </Link>
+                    <Link
+                        href="#how-it-works"
+                        scroll={false}
+                        onClick={() => {
+                            document
+                                .getElementById('how-it-works')
+                                ?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                    >
+                        <p>How it Works</p>
+                    </Link>
+                    <Link
+                        href="#learn-more"
+                        scroll={false}
+                        onClick={() => {
+                            document
+                                .getElementById('learn-more')
+                                ?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                    >
+                        <p>Learn More</p>
+                    </Link>
+                    <Link
+                        href="#blog"
+                        scroll={false}
+                        onClick={() => {
+                            document
+                                .getElementById('blog')
+                                ?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                    >
+                        <p>Blog</p>
+                    </Link>
                 </div>
             </div>
         </>
