@@ -20,7 +20,7 @@ const Navbar = () => {
                                     ?.scrollIntoView({ behavior: 'smooth' });
                             }}
                         >
-                            <p className="2xl:text-md text-sm hover:cursor-pointer text-black hover:font-bold">
+                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:text-[var(--text-highlight)]">
                                 Why Local Reach?
                             </p>
                         </Link>
@@ -33,7 +33,7 @@ const Navbar = () => {
                                     ?.scrollIntoView({ behavior: 'smooth' });
                             }}
                         >
-                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:font-bold">
+                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:text-[var(--text-highlight)]">
                                 How it Works
                             </p>
                         </Link>
@@ -46,7 +46,7 @@ const Navbar = () => {
                                     ?.scrollIntoView({ behavior: 'smooth' });
                             }}
                         >
-                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:font-bold">
+                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:text-[var(--text-highlight)]">
                                 Learn More
                             </p>
                         </Link>
@@ -59,7 +59,7 @@ const Navbar = () => {
                                     ?.scrollIntoView({ behavior: 'smooth' });
                             }}
                         >
-                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:font-bold">
+                            <p className="2xl:text-md text-sm hover:cursor-pointer hover:text-[var(--text-highlight)]">
                                 Blog
                             </p>
                         </Link>
