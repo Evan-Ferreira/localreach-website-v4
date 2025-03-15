@@ -1,5 +1,9 @@
+'use client';
+
 import React from 'react';
 import MobileNavbar from './_components/navbar/mobileNavbar';
+import Link from 'next/link';
+
 const Navbar = () => {
     return (
         <>
@@ -7,12 +11,53 @@ const Navbar = () => {
                 <div className="flex flex-row px-36 mt-12 justify-between 2xl:gap-38 gap-10 h-full w-full items-center">
                     <img src="/lr-logo.svg" alt="logo" className="h-4/5" />
                     <div className="flex flex-row bg-[#FFFFFF4D] gap-6 px-16 w-full h-full rounded-full justify-around items-center">
-                        <p className="2xl:text-lg text-md">Why Local Reach?</p>
-                        <p className="2xl:text-lg text-md">How it Works</p>
-                        <p className="2xl:text-lg text-md">Learn More</p>
-                        <p className="2xl:text-lg text-md">Blog</p>
+                        <Link href="#why-local-reach">
+                            <p className="2xl:text-lg text-md">
+                                Why Local Reach?
+                            </p>
+                        </Link>
+                        <Link
+                            href="#how-it-works"
+                            scroll={false}
+                            onClick={() => {
+                                document
+                                    .getElementById('how-it-works')
+                                    ?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                        >
+                            <p className="2xl:text-lg text-md">How it Works</p>
+                        </Link>
+                        <Link
+                            href="#learn-more"
+                            scroll={false}
+                            onClick={() => {
+                                document
+                                    .getElementById('learn-more')
+                                    ?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                        >
+                            <p className="2xl:text-lg text-md">Learn More</p>
+                        </Link>
+                        <Link
+                            href="#blog"
+                            scroll={false}
+                            onClick={() => {
+                                document
+                                    .getElementById('blog')
+                                    ?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                        >
+                            <p className="2xl:text-lg text-md">Blog</p>
+                        </Link>
                     </div>
-                    <button className="bg-[var(--button-blue)] w-96 h-9/10 text-[var(--background)]">
+                    <button
+                        className="bg-[var(--button-blue)] w-96 h-9/10 text-[var(--background)]"
+                        onClick={() => {
+                            document
+                                .getElementById('learn-more')
+                                ?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                    >
                         Contact Us
                     </button>
                 </div>
