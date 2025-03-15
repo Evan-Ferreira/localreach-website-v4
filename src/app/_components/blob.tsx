@@ -41,7 +41,7 @@ const Blob = ({
 
     return (
         <div
-            className="Animate"
+            className="Animate max-md:opacity-0"
             style={{
                 position: 'fixed',
                 transform: `translate(${position.x}px, ${position.y}px)`,
