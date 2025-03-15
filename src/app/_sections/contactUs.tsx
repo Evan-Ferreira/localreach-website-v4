@@ -43,20 +43,20 @@ const ContactUs = () => {
             <img
                 src="/taiv-evan-joseph.jpg"
                 alt="taiv-evan-joseph"
-                className="lg:w-[28rem] h-[36rem] rounded-2xl object-cover w-0 md:flex hidden"
+                className="lg:w-[28rem] h-[36rem] rounded-2xl object-cover w-0 md:flex hidden relative z-100"
             />
             <div className="flex flex-col gap-8">
                 <div className="flex flex-col gap-8 items-center justify-center">
-                    <h2 className="text-4xl font-bold tracking-tighters">
+                    <h2 className="text-4xl font-bold tracking-tighter relative z-100">
                         CONTACT US
                     </h2>
-                    <h4 className="text-md text-gray-500 mb-8">
+                    <h4 className="text-md text-gray-500 mb-8 relative z-100">
                         Reach out for personalized solutions or to connect!
                     </h4>
                 </div>
                 <form
                     onSubmit={handleSubmit(onSubmit)}
-                    className="flex flex-col gap-6"
+                    className="flex flex-col gap-6 relative z-100"
                 >
                     <input
                         {...register('name')}
@@ -89,7 +89,7 @@ const ContactUs = () => {
                     <div className="flex justify-center">
                         <button
                             type="submit"
-                            className="bg-[var(--text-highlight)] text-[var(--text-base)] font-semibold text-md py-3.5 w-[180px]"
+                            className="bg-[var(--text-highlight)] text-[var(--text-base)] font-semibold text-md py-3.5 w-[180px] relative z-100"
                         >
                             Submit
                         </button>
