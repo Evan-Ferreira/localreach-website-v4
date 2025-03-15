@@ -10,7 +10,7 @@ const Tabs: React.FC = () => {
     {
       label: 'For Advertisers',
       content: (
-        <div className="p-4 md:p-6 text-[var(--text-base)] h-full">
+        <div className="p-4 md:p-6 text-[var(--text-base)] h-full ">
           <div className="flex flex-col md:flex-row">
             <div>
               <h3 className="pb-2"> Advertisers </h3>
@@ -66,9 +66,9 @@ const Tabs: React.FC = () => {
   ];
 
   return (
-    <div className="mx-auto w-full h-screen px-4 md:px-36 ">
+    <div className="mx-auto w-full h-screen px-4 md:px-36 relative z-100 ">
       {/* Tab Headers */}
-      <div className="flex">
+      <div className="flex relative z-100">
         {tabs.map((tab, index) => (
           <button
             key={index}
