@@ -36,12 +36,10 @@ h2 {
 }
 
 h3 {
-
-  font-family: var(--font-raleway), sans-serif;
-  color: var(--text-highlight);
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-
+    font-family: var(--font-raleway), sans-serif;
+    color: var(--text-highlight);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
 }
 
 @layer utilities {
@@ -53,5 +51,4 @@ h3 {
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
-}
 }
