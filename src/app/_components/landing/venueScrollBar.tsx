@@ -53,13 +53,13 @@ const VenueScrollBar = () => {
     return (
         <div ref={scrollRef} className="flex flex-row gap-8 px-4 h-full">
             <div className="h-full flex flex-col justify-center items-center relative">
-                <div className="flex flex-col items-center justify-end h-full">
+                <div className="flex flex-col items-center justify-end h-full gap-16">
                     {[
-                        { src: '/fergs.svg', alt: 'fergs' },
-                        { src: '/blindpig.svg', alt: 'blindpig' },
-                        { src: '/caddys.svg', alt: 'caddys' },
-                        { src: '/mititmiti.svg', alt: 'mitimiti' },
-                        { src: '/bullshooters.svg', alt: 'bullshooters' },
+                        { src: '/Pilot House.svg', alt: 'Pilot House' },
+                        { src: '/Mansion.svg', alt: 'Mansion' },
+                        { src: '/The Wilcox.svg', alt: 'The Wilcox' },
+                        { src: '/Tommys.svg', alt: 'Tommys' },
+                        { src: '/Brass.svg', alt: 'Brasserie' },
                     ].map((image, index) => (
                         <Image
                             key={index}
@@ -78,7 +78,7 @@ const VenueScrollBar = () => {
                     <div className="h-[200vh]"></div>
                 </div>
             </div>
-            <div className="h-full flex flex-col gap-8 items-center justify-end pb-43">
+            <div className="h-full flex flex-col gap-8 items-center justify-end pb-26">
                 {[0, 1, 2, 3, 4].map((index) => (
                     <div
                         key={index}
