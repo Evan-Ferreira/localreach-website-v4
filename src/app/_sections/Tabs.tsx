@@ -5,41 +5,46 @@ import Button from '../_components/Button';
 
 const Tabs: React.FC = () => {
     const [activeTab, setActiveTab] = useState<number>(0);
-
     const tabs = [
         {
-            label: 'For Advertisers',
+            label: "For Advertisers",
             content: (
-                <div className=" text-[var(--text-base)] h-full">
-                    <div className="flex flex-col md:flex-row">
-                        <div className="p-4 md:pr-24 md:p-2">
-                            <h3 className="pb-2"> Advertisers </h3>
-                            <h2 className="text-2xl md:text-3xl font-bold mb-4 uppercase">
+                <div className="text-[var(--text-base)] h-full">
+                    <div className="flex flex-col md:flex-row gap-y-12 md:gap-x-12 justify-evenly">
+                        <div className="min-w-1/3 p-4 md:p-6 lg:p-8 max-w-prose">
+                            <h3 className="pb-4 text-lg md:text-xl font-medium text-gray-500">For Advertisers</h3>
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 uppercase">
                                 Transform Your Venue
                             </h2>
-                            <p className="mb-8">
-                                Democratizing TV Advertising. Challenging
-                                Corporate Dominance. Empower your reach. Lorem
-                                ipsum dolor sit amet, consectetur adipiscing
-                                elit. Nullam facilisis felis non libero
-                                ultricies, eget tristique libero volutpat.
+                            <p className="mb-8 text-lg md:text-xl lg:text-2xl leading-relaxed">
+                                Democratizing TV advertising. Challenging corporate dominance. 
+                                <strong> Empower your reach</strong> by displaying your ads in high-traffic venues.
                             </p>
+    
+                            {/* Key Benefits */}
+                            <ul className="mb-8 list-disc text-[var(--text-secondary)] list-inside space-y-4  md:text-lg">
+                                <li>Targeted local ad placements for maximum impact</li>
+                                <li>AI-driven ad scheduling to optimize visibility</li>
+                                <li>Cost-effective solutions for small and large businesses</li>
+                            </ul>
+                            <div className='pt-12'>
                             <Button
-                                onClick={() =>
-                                    (window.location.href =
-                                        'https://example.com')
-                                }
+                                onClick={() => (window.location.href = "https://example.com")}
+                                className="text-lg md:text-xl px-6 py-3"
                             >
                                 Explore Services
                             </Button>
+                            </div>
                         </div>
-                        <div className="w-full h-[300px] md:h-full flex items-center justify-center">
+    
+                        {/* Image Section */}
+                        <div className="w-full md:w-1/2 flex items-center justify-center">
                             <Image
                                 src="/Kingston_Ontario_Canada_-_Laslovarga_(28).jfif"
                                 alt="Restaurant digital display showcase"
-                                width={400}
-                                height={400}
-                                className="w-full h-full rounded-lg shadow-lg object-cover mt-4 md:mt-0"
+                                width={500}
+                                height={500}
+                                className="w-full h-auto rounded-lg shadow-lg object-cover"
                                 priority
                             />
                         </div>
@@ -48,39 +53,44 @@ const Tabs: React.FC = () => {
             ),
         },
         {
-            label: 'For Restaurants',
+            label: "For Restaurants",
             content: (
                 <div className="text-[var(--text-base)] h-full">
-                    <div className="flex flex-col h-full md:flex-row ">
-                        <div className="p-4 md:pr-24 md:p-2">
-                            <h3 className="pb-2"> Restaurants </h3>
-                            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                    <div className="flex flex-col md:flex-row gap-y-12 md:gap-x-12 justify-evenly">
+                        <div className="p-4 min-w-1/3 md:p-6 lg:p-8 max-w-prose">
+                            <h3 className="pb-4 text-lg md:text-xl font-medium text-gray-500">For Restaurants</h3>
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
                                 Enhance Your Dining Experience
                             </h2>
-                            <p className="mb-8">
-                                Elevate your restaurant&apos;s ambiance with
-                                cutting-edge technology. Engage your customers
-                                with interactive displays and personalized
-                                content. Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit.
+                            <p className="mb-8 text-lg md:text-xl lg:text-2xl leading-relaxed">
+                                Elevate your restaurant’s ambiance with cutting-edge technology. 
+                                <strong> Engage your customers</strong> with dynamic and interactive digital displays.
                             </p>
-                            <Button
-                                onClick={() =>
-                                    (window.location.href =
-                                        'https://example.com')
-                                }
-                            >
-                                {' '}
-                                Discover More{' '}
-                            </Button>
+    
+                            {/* Key Benefits */}
+                            <ul className="mb-8 list-disc list-inside space-y-4 text-[var(--text-secondary)] md:text-lg">
+                                <li>Replace existing commercials with in-house promotions</li>
+                                <li>AI-powered system ensures seamless ad transitions</li>
+                                <li>Generate passive income through ad partnerships</li>
+                            </ul>
+                            <div className='pt-12'>
+                                <Button
+                                    onClick={() => (window.location.href = "https://example.com")}
+                                    className="text-lg md:text-xl px-6 py-3"
+                                >
+                                    Discover More
+                                </Button>
+                            </div>
                         </div>
-                        <div className="w-full h-[300px] md:h-full flex items-center justify-center">
+    
+                        {/* Image Section */}
+                        <div className="w-full md:w-1/2 flex items-center justify-center">
                             <Image
                                 src="/resturant.jfif"
                                 alt="Restaurant digital display showcase"
-                                width={400} 
-                                height={400}
-                                className="w-full h-full rounded-lg shadow-lg object-cover mt-4 md:mt-0"
+                                width={500}
+                                height={500}
+                                className="w-full h-auto rounded-lg shadow-lg object-cover"
                                 priority
                             />
                         </div>
@@ -89,6 +99,9 @@ const Tabs: React.FC = () => {
             ),
         },
     ];
+    
+
+    
 
     return (
         <div

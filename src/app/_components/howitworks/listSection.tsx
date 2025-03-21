@@ -70,7 +70,7 @@ const ImageScrollBar = () => {
 
     return (
         <div className=' w-full'>
-            <div ref={scrollRef} className="relative max-h-[500px] flex flex-row gap-8">
+            <div ref={scrollRef} className="relative max-h-[66vh] flex flex-row gap-8">
                 <div
                         className="absolute inset-0 z-1000 h-full w-full overflow-y-auto no-scrollbar"
                         onScroll={handleScroll}
@@ -87,7 +87,7 @@ const ImageScrollBar = () => {
                     />
                 
                 </div>
-                <div className="h-[500px] ml-10 w-full flex flex-col justify-center relative">
+                <div className="h-[66vh] ml-10 w-full flex flex-col justify-center relative">
                     {components.map((component, index) => (
                         <div
                             key={index}
@@ -104,69 +104,66 @@ const ImageScrollBar = () => {
     );
 };
 const DemocratizingTV = () => (
-    <div className="p-5 mb-4">
-        <div className="flex items-center mb-3">
-            <span className="text-orange-500 text-2xl font-bold mr-3">01</span>
-            <h3 className="text-xl font-bold">Sign Up & Install</h3>
+    <div className="p-5 mb-4 lg:p-10 lg:mb-8">
+        <div className="flex items-center mb-3 lg:mb-6">
+            <span className="text-orange-500 text-2xl font-bold mr-3 lg:text-4xl lg:mr-6">01</span>
+            <h3 className="text-xl font-bold lg:text-3xl">Sign Up & Install</h3>
         </div>
-        <div className="ml-8 text-white space-y-2">
+        <div className="ml-8 text-white space-y-2 lg:ml-16 lg:space-y-4">
             <div className="flex items-start">
-                <span className="text-orange-500 mr-2">•</span>
-                <p>Register with Local Reach</p>
+                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
+                <p className="lg:text-lg">Register with Local Reach</p>
             </div>
             <div className="flex items-start">
-                <span className="text-orange-500 mr-2">•</span>
-                <p>Receive our plug-and-play device</p>
+                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
+                <p className="lg:text-lg">Receive our plug-and-play device</p>
             </div>
             <div className="flex items-start">
-                <span className="text-orange-500 mr-2">•</span>
-                <p>No technical expertise required</p>
+                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
+                <p className="lg:text-lg">No technical expertise required</p>
             </div>
         </div>
     </div>
 );
 
 const InnovativeSolutions = () => (
-    <div className="p-5 mb-4">
-        <div className="flex items-center mb-3">
-            <span className="text-orange-500 text-2xl font-bold mr-3">02</span>
-            <h3 className="text-xl font-bold">Smart Ad Technology</h3>
+    <div className="p-5 mb-4 lg:p-10 lg:mb-8">
+        <div className="flex items-center mb-3 lg:mb-6">
+            <span className="text-orange-500 text-2xl font-bold mr-3 lg:text-4xl lg:mr-6">02</span>
+            <h3 className="text-xl font-bold lg:text-3xl">Smart Ad Technology</h3>
         </div>
-        <div className="ml-8 text-white space-y-2">
-          
-        <div className="flex items-start">
-                <span className="text-orange-500 mr-2">•</span>
-                <p>Detects commercials in real time</p>
+        <div className="ml-8 text-white space-y-2 lg:ml-16 lg:space-y-4">
+            <div className="flex items-start">
+                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
+                <p className="lg:text-lg">Detects commercials in real time</p>
             </div>
             <div className="flex items-start">
-                <span className="text-orange-500 mr-2">•</span>
-                <p>Replaces with your chosen content</p>
+                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
+                <p className="lg:text-lg">Replaces with your chosen content</p>
             </div>
             <div className="flex items-start">
-                <span className="text-orange-500 mr-2">•</span>
-                <p>You maintain full control</p>
+                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
+                <p className="lg:text-lg">You maintain full control</p>
             </div>
         </div>
     </div>
 );
 
 const ReachAudience = () => (
-    <div className="p-5 mb-4">
-        <div className="flex items-center mb-3">
-            <span className="text-orange-500 text-2xl font-bold mr-3">03</span>
-            <h3 className="text-xl font-bold">Earn Revenue</h3>
+    <div className="p-5 mb-4 lg:p-10 lg:mb-8">
+        <div className="flex items-center mb-3 lg:mb-6">
+            <span className="text-orange-500 text-2xl font-bold mr-3 lg:text-4xl lg:mr-6">03</span>
+            <h3 className="text-xl font-bold lg:text-3xl">Earn Revenue</h3>
         </div>
-        <div className="ml-8 text-white space-y-2">
-           
+        <div className="ml-8 text-white space-y-2 lg:ml-16 lg:space-y-4">
             <div className="flex items-start">
-                <span className="text-orange-500 mr-2">•</span>
-                <p>Convert TVs into revenue sources</p>
+                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
+                <p className="lg:text-lg">Convert TVs into revenue sources</p>
             </div>
             <div className="flex items-start">
-                <span className="text-orange-500 mr-2">•</span>
-                <p>Earn passive income with each ad</p>
+                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
+                <p className="lg:text-lg">Earn passive income with each ad</p>
             </div>
-            
         </div>
     </div>
 );
