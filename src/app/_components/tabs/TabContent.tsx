@@ -51,7 +51,7 @@ const TabContent: React.FC<TabContentProps> = ({
                     </div>
                 </div>
 
-                <div className="w-full md:w-6/12">
+                <div className="hidden md:block w-full md:w-6/12">
                     <Image
                         src={imageSrc}
                         alt={imageAlt}

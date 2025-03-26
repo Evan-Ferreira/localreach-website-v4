@@ -1,7 +1,6 @@
-
 'use client'
 import React, { useState } from 'react';
-import Image from 'next/image';
+import ImageVideoLoader from './imageVideoLoader';
 
 const MobileListSection = () => {
   return (
@@ -68,14 +67,15 @@ const MobileImageScrollView = () => {
 
 
   return (
-    <div className="flex flex-col items-center w-full h-128">
+    <div className="flex flex-col items-center w-full h-full">
       {/* Image container with fixed height */}
       <div className="relative w-full h-64 mb-6">
-        <Image
+        <ImageVideoLoader
           src={images[activeIndex].src}
           alt={images[activeIndex].alt}
-          fill
-          className={`rounded-md object-cover ${imageOpacity}`}
+          width={800}
+          height={400}
+          className={`rounded-md object-cover h-64 ${imageOpacity}`}
         />
       </div>
       

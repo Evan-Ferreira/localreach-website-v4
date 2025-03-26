@@ -19,7 +19,7 @@ const Tabs: React.FC = () => {
     return (
         <div
             id="why-local-reach"
-            className="mx-auto w-full min-h-screen px-4 md:px-36 relative z-100 "
+            className="mx-auto mb-16 min-[1400px]:mb-0 w-full md:min-h-screen px-4 md:px-36 relative z-100 "
         >
             {/* Tab Headers */}
             <div className="flex relative z-100">
@@ -39,8 +39,8 @@ const Tabs: React.FC = () => {
             </div>
 
             {/* Tab Content */}
-            <div className="my-[5%] p-0 relative overflow-hidden">
-                <div className="h-[86vh] min-h-[600px] md:h-[60vh]">
+            <div className="my-[5%] p-0 relative md:overflow-hidden">
+                <div className=" min-h-[600px] md:min-h-[600px] md:h-[60vh]">
                     {tabs.map((tab, index) => (
                         <div
                             key={index}
@@ -59,7 +59,7 @@ const Tabs: React.FC = () => {
                 </div>
             </div>
 
-            <div className="mx-0 h-[3px]  md:mb-0 w-full bg-[var(--text-highlight)]"></div>
+            <div className="mx-0 h-[3px] w-full bg-[var(--text-highlight)]"></div>
         </div>
     );
 };
