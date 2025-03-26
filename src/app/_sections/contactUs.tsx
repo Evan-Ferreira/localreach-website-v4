@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import Image from 'next/image';
 
 type FormData = {
     name: string;
@@ -41,11 +42,13 @@ const ContactUs = () => {
     return (
         <div
             id="learn-more"
-            className="w-screen h-screen bg-[var(--background)] flex flex-row lg:px-36 px-12 py-12 justify-center items-center gap-36"
+            className="w-screen mb-32 h-screen bg-[var(--background)] flex flex-row lg:px-36 px-12 py-12 justify-center items-center gap-36"
         >
-            <img
+            <Image
                 src="/taiv-evan-joseph.jpg"
                 alt="taiv-evan-joseph"
+                width={448} // 28rem = 448px
+                height={576} // 36rem = 576px
                 className="lg:w-[28rem] h-[36rem] rounded-2xl object-cover w-0 md:flex hidden relative z-100"
             />
             <div className="flex flex-col gap-8">

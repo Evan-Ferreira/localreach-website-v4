@@ -4,7 +4,7 @@ import Landing from './_sections/landing';
 import Tabs from './_sections/Tabs';
 import Blog from './_sections/blog';
 import Blob from './_components/blob';
-
+import Footer from './_components/footer';
 export default function Home() {
     return (
         <div>
@@ -17,6 +17,7 @@ export default function Home() {
                 <div className="hidden md:block">
                     <Blob />
                 </div>
+                <Footer />
             </div>
         </div>
     );
