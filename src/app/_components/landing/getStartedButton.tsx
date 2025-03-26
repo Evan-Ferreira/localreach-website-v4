@@ -15,8 +15,8 @@ const GetStartedButton = () => {
             }}
         >
             <p
-                className="bg-[#95D0FD] text-[#080808] group-hover:text-[#FFFFFF] px-12 py-3 max-md:py-4 group-hover:bg-[#69a2cd] 
-                    cursor-pointer transition-all duration-300 ease-in-out text-center"
+                className="bg-[#95D0FD] text-[#080808] group-hover:text-[#FFFFFF] px-6 sm:px-8 md:px-12 py-2.5 sm:py-3 md:py-4 group-hover:bg-[#69a2cd] 
+                    cursor-pointer transition-all duration-300 ease-in-out text-center text-sm sm:text-base"
             >
                 Get Started
             </p>

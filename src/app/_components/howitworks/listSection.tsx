@@ -69,102 +69,95 @@ const ImageScrollBar = () => {
     ];
 
     return (
-        <div className=' w-full'>
-            <div ref={scrollRef} className="relative max-h-[66vh] flex flex-row gap-8">
+        <div className='w-full'>
+            <div ref={scrollRef} className="relative h-128 flex flex-row gap-8">
                 <div
                         className="absolute inset-0 z-1000 h-full w-full overflow-y-auto no-scrollbar"
                         onScroll={handleScroll}
                     >
                         <div className="h-[200vh] "></div>
                 </div>
-                <div className="min-h-full min-w-1/2 w-1/2 flex flex-col justify-center items-left relative">
+                <div className=" min-w-[550px] w-1/2 flex flex-col justify-center items-left relative">
                     <ImageVideoLoader
                         src={images[activeImage].src}
                         alt={images[activeImage].alt}
                         width={1000}
                         height={1000}
-                        className={`transition-all w-full min-h-full duration-300 rounded-md object-cover my-auto ${imageOpacity}`}
+                        className={`transition-all w-full h-full max-[1400px]:max-h-96 duration-300 rounded-md object-cover my-auto ${imageOpacity}`}
                     />
                 
                 </div>
-                <div className="h-[66vh] ml-10 w-full flex flex-col justify-center relative">
-                    {components.map((component, index) => (
-                        <div
-                            key={index}
-                            className={`w-full absolute text-left ${opacityClasses[index]} 
-                                ${index === 0 ? 'top-[16.67%]' : index === 1 ? 'top-[50%]' : 'top-[83.33%]'} 
-                                -translate-y-1/2`}
-                        >
-                            {component}
-                        </div>
-                    ))}
+                <div className="ml-10 w-1/2 flex flex-col justify-center relative">
+                    <div className="flex flex-col h-full justify-evenly">
+                        {components.map((component, index) => (
+                            <div
+                                key={index}
+                                className={`w-full text-left ${opacityClasses[index]}`}
+                            >
+                                {component}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
-const DemocratizingTV = () => (
-    <div className="p-5 mb-4 lg:p-10 lg:mb-8">
-        <div className="flex items-center mb-3 lg:mb-6">
-            <span className="text-orange-500 text-2xl font-bold mr-3 lg:text-4xl lg:mr-6">01</span>
-            <h3 className="text-xl font-bold lg:text-3xl">Sign Up & Install</h3>
+interface StepProps {
+    number: string;
+    title: string;
+    bulletPoints: string[];
+}
+
+const Step: React.FC<StepProps> = ({ number, title, bulletPoints }) => (
+    <div className="p-4 mb-2">
+        <div className="flex items-center mb-2">
+            <span className="text-orange-500 text-lg min-[1400px]:text-4xl font-bold mr-3">{number}</span>
+            <h3 className="text-base min-[1400px]:text-3xl font-bold">{title}</h3>
         </div>
-        <div className="ml-8 text-white space-y-2 lg:ml-16 lg:space-y-4">
-            <div className="flex items-start">
-                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
-                <p className="lg:text-lg">Register with Local Reach</p>
-            </div>
-            <div className="flex items-start">
-                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
-                <p className="lg:text-lg">Receive our plug-and-play device</p>
-            </div>
-            <div className="flex items-start">
-                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
-                <p className="lg:text-lg">No technical expertise required</p>
-            </div>
+        <div className="ml-6 text-white space-y-2">
+            {bulletPoints.map((point, index) => (
+                <div key={index} className="flex items-start">
+                    <span className="text-orange-500 mr-2 text-xs min-[1400px]:text-xl">•</span>
+                    <p className="text-xs min-[1400px]:text-lg">{point}</p>
+                </div>
+            ))}
         </div>
     </div>
+);
+
+const DemocratizingTV = () => (
+    <Step
+        number="01"
+        title="Sign Up & Install"
+        bulletPoints={[
+            "Register with Local Reach",
+            "Receive our plug-and-play device",
+            "No technical expertise required"
+        ]}
+    />
 );
 
 const InnovativeSolutions = () => (
-    <div className="p-5 mb-4 lg:p-10 lg:mb-8">
-        <div className="flex items-center mb-3 lg:mb-6">
-            <span className="text-orange-500 text-2xl font-bold mr-3 lg:text-4xl lg:mr-6">02</span>
-            <h3 className="text-xl font-bold lg:text-3xl">Smart Ad Technology</h3>
-        </div>
-        <div className="ml-8 text-white space-y-2 lg:ml-16 lg:space-y-4">
-            <div className="flex items-start">
-                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
-                <p className="lg:text-lg">Detects commercials in real time</p>
-            </div>
-            <div className="flex items-start">
-                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
-                <p className="lg:text-lg">Replaces with your chosen content</p>
-            </div>
-            <div className="flex items-start">
-                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
-                <p className="lg:text-lg">You maintain full control</p>
-            </div>
-        </div>
-    </div>
+    <Step
+        number="02"
+        title="Smart Ad Technology"
+        bulletPoints={[
+            "Detects commercials in real time",
+            "Replaces with your chosen content",
+            "You maintain full control"
+        ]}
+    />
 );
 
 const ReachAudience = () => (
-    <div className="p-5 mb-4 lg:p-10 lg:mb-8">
-        <div className="flex items-center mb-3 lg:mb-6">
-            <span className="text-orange-500 text-2xl font-bold mr-3 lg:text-4xl lg:mr-6">03</span>
-            <h3 className="text-xl font-bold lg:text-3xl">Earn Revenue</h3>
-        </div>
-        <div className="ml-8 text-white space-y-2 lg:ml-16 lg:space-y-4">
-            <div className="flex items-start">
-                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
-                <p className="lg:text-lg">Convert TVs into revenue sources</p>
-            </div>
-            <div className="flex items-start">
-                <span className="text-orange-500 mr-2 lg:mr-4">•</span>
-                <p className="lg:text-lg">Earn passive income with each ad</p>
-            </div>
-        </div>
-    </div>
+    <Step
+        number="03"
+        title="Earn Revenue"
+        bulletPoints={[
+            "Convert TVs into revenue sources",
+            "Earn passive income with each ad"
+        ]}
+    />
 );
 export default ListSection;
