@@ -51,8 +51,8 @@ const VenueScrollBar = () => {
     };
 
     return (
-        <div ref={scrollRef} className="flex flex-row gap-8 px-4 h-full">
-            <div className="h-full flex flex-col justify-center items-center relative">
+        <div ref={scrollRef} className="flex flex-row gap-8 px-4">
+            <div className="flex flex-col justify-center items-center relative">
                 <div className="flex flex-col items-center justify-end h-full gap-16">
                     {[
                         { src: '/Pilot House.svg', alt: 'Pilot House' },

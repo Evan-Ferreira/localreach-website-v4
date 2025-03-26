@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import MobileBlog from '../_components/blog/mobileBlog';
 
 interface BlogPost {
     id: number;
@@ -38,7 +39,13 @@ const blogPosts: BlogPost[] = [
 const Blog = () => {
     return (
         <div className="w-full min-h-screen bg-[var(--background)] py-16 px-8 md:px-36 flex items-center">
-            <div className="w-full">
+            {/* Mobile version */}
+            <div className="md:hidden w-full">
+                <MobileBlog />
+            </div>
+            
+            {/* Desktop version */}
+            <div className="hidden md:block w-full">
                 <div className="text-center mb-12 relative z-100">
                     <h2 className="text-4xl font-bold mb-4">Latest Updates</h2>
                     <h4 className="text-md text-gray-500 mb-8">Stay informed with our latest news and insights</h4>
@@ -66,7 +73,6 @@ const Blog = () => {
                                 </button>
                             </div>
                         </div>
-                        
                     ))}
                 </div>
             </div>

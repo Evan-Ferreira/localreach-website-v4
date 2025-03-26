@@ -14,7 +14,9 @@ export default function Home() {
                 <HowItWorks></HowItWorks>
                 <Blog></Blog>
                 <ContactUs />
-                <Blob />
+                <div className="hidden md:block">
+                    <Blob />
+                </div>
             </div>
         </div>
     );

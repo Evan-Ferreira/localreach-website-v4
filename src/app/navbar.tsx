@@ -7,8 +7,8 @@ import Link from 'next/link';
 const Navbar = () => {
     return (
         <>
-            <div className="hidden lg:flex absolute w-full h-14 flex-row justify-center z-100">
-                <div className="flex flex-row px-36 mt-12 justify-between 2xl:gap-38 gap-10 h-full w-full items-center">
+            <div className="hidden lg:flex absolute w-full h-14 flex-row justify-center z-100 lg:scale-75 2xl:scale-100">
+                <div className="flex flex-row px-36 mt-6 justify-between 2xl:gap-38 gap-10 h-full w-full items-center">
                     <img src="/lr-logo.svg" alt="logo" className="h-4/5" />
                     <div className="flex flex-row gap-6 px-16 w-full bg-[#FFFFFF4D] h-4/5 rounded-full justify-around items-center">
                         <Link
