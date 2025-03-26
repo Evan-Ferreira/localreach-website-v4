@@ -5,7 +5,7 @@ const restaurantContent: TabContentProps = {
     title: "Enhance Your Dining Experience",
     subtitle: "For Restaurants",
     description: "Elevate your restaurant's ambiance with cutting-edge technology. Engage your customers with dynamic and interactive digital displays.",
-    imageSrc: "/resturant.jfif",
+    imageSrc: "/resturant.jpg",
     imageAlt: "Restaurant digital display showcase",
     buttonText: "Discover More",
     buttonLink: "https://example.com",

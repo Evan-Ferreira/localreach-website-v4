@@ -81,8 +81,8 @@ const ImageScrollBar = () => {
                     <ImageVideoLoader
                         src={images[activeImage].src}
                         alt={images[activeImage].alt}
-                        width={1000}
-                        height={1000}
+                        width={600}
+                        height={400}
                         className={`transition-all w-full h-full max-[1400px]:max-h-96 duration-300 rounded-md object-cover my-auto ${imageOpacity}`}
                     />
                 
