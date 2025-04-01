@@ -8,7 +8,7 @@ const restaurantContent: TabContentProps = {
     imageSrc: "/resturant.jpg",
     imageAlt: "Restaurant digital display showcase",
     buttonText: "Discover More",
-    buttonLink: "https://example.com",
+    buttonLink: "https://www.taiv.tv/",
     features: [
         "Replace existing commercials with in-house promotions",
         "AI-powered system ensures seamless ad transitions",

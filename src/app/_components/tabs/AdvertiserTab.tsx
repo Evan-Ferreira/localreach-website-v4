@@ -8,7 +8,7 @@ const advertiserContent: TabContentProps = {
     imageSrc: "/Kingston_Ontario_Canada_-_Laslovarga_(28).jpg",
     imageAlt: "Restaurant digital display showcase",
     buttonText: "Explore Services",
-    buttonLink: "https://example.com",
+    buttonLink: "https://www.taiv.tv/",
     features: [
         "Targeted local ad placements for maximum impact",
         "AI-driven ad scheduling to optimize visibility",

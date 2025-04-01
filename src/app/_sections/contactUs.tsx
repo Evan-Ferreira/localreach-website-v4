@@ -45,7 +45,7 @@ const ContactUs = () => {
             className="w-screen mb-32 h-screen bg-[var(--background)] flex flex-row lg:px-36 px-12 py-12 justify-center items-center gap-36"
         >
             <Image
-                src="/taiv-evan-joseph.jpg"
+                src="/taiv_contact.jpg"
                 alt="taiv-evan-joseph"
                 width={448} // 28rem = 448px
                 height={576} // 36rem = 576px
