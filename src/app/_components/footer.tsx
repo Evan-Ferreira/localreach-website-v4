@@ -26,16 +26,14 @@ const Footer = () => {
                         <h4 className="text-base font-semibold mb-3">Resources</h4>
                         <ul className="space-y-1.5">
                             <li><Link href="/blog" className="text-orange-100 hover:text-white transition-colors text-sm">Blog</Link></li>
-                            <li><Link href="/case-studies" className="text-orange-100 hover:text-white transition-colors text-sm">Case Studies</Link></li>
-                            <li><Link href="/faq" className="text-orange-100 hover:text-white transition-colors text-sm">FAQ</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-base font-semibold mb-3">Contact</h4>
                         <ul className="space-y-1.5 text-orange-100 text-sm">
-                            <li>123 Business Street</li>
-                            <li>City, State 12345</li>
-                            <li>contact@localreach.com</li>
+                            <li> 69 Union St, Kingston, ON K7K 1R9</li>
+                            <li>Kingston, ON</li>
+                            <li>thelocalreach@gmail.com</li>
                         </ul>
                     </div>
                 </div>
