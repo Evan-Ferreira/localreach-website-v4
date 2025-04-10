@@ -44,6 +44,13 @@ h3 {
     letter-spacing: 0.3em;
 }
 
+h5 {
+    font-family: var(--font-raleway), sans-serif;
+    color: var(--text-highlight);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
 @layer utilities {
     .no-scrollbar::-webkit-scrollbar {
         display: none;

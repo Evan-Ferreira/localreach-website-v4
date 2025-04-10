@@ -111,9 +111,9 @@ interface StepProps {
 
 const Step: React.FC<StepProps> = ({ number, title, bulletPoints }) => (
     <div className="p-4 mb-2">
-        <div className="flex items-center mb-2">
-            <span className="text-orange-500 text-lg min-[1400px]:text-4xl font-bold mr-3">{number}</span>
-            <h3 className="text-base min-[1500px]:text-3xl font-bold">{title}</h3>
+        <div className="flex items-center  mb-2">
+            <span className=" text-orange-500 text-lg min-[1400px]:text-4xl font-bold mr-3">{number}</span>
+            <h5 className="text-base min-[1500px]:text-3xl font-bold">{title}</h5>
         </div>
         <div className="ml-6 text-white space-y-2">
             {bulletPoints.map((point, index) => (
