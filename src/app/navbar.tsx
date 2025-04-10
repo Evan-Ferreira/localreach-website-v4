@@ -3,10 +3,16 @@
 import React from 'react';
 import MobileNavbar from './_components/navbar/mobileNavbar';
 import Link from 'next/link';
+import AnimationLoader from './_components/landing/animationloader';
 
 const Navbar = () => {
     return (
         <>
+        <AnimationLoader
+        direction="down"
+        delay={0.5}
+        duration={0.5}
+        type="tween">
             <div className="hidden lg:flex absolute w-full h-14 flex-row justify-center z-100 lg:scale-75 2xl:scale-100">
                 <div className="flex flex-row px-36 mt-6 justify-between 2xl:gap-38 gap-10 h-full w-full items-center">
                     <img src="/lr-logo.svg" alt="logo" className="h-4/5" />
@@ -77,6 +83,7 @@ const Navbar = () => {
                     </button>
                 </div>
             </div>
+            </AnimationLoader>
             <MobileNavbar />
         </>
     );
