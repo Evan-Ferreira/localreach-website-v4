@@ -15,12 +15,16 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --text-highlight: #db632b;
-        --text-secondary: #9E9E9E;
+        --text-secondary: #9e9e9e;
         --text-base: #e9e9e9;
         --background: #131313;
         --foreground: #ededed;
         --button-blue: #95d0fd;
     }
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {
@@ -29,6 +33,8 @@ body {
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-raleway), sans-serif;
+    width: 100%;
+    position: relative;
 }
 
 h2 {

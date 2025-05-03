@@ -5,19 +5,19 @@ import { ReactNode, useEffect, useState } from 'react';
 
 /**
  * AnimationLoader Component
- * 
+ *
  * A wrapper component that adds entrance animations and effects to its children.
  * Only animates on non-mobile devices.
- * 
+ *
  * @example
  * // Basic usage - animates upward
  * <AnimationLoader>
  *   <div>Content slides up</div>
  * </AnimationLoader>
- * 
+ *
  * @example
  * // Custom animation from the right with delay
- * <AnimationLoader 
+ * <AnimationLoader
  *   direction="right"
  *   delay={0.3}
  *   duration={0.8}
@@ -25,7 +25,7 @@ import { ReactNode, useEffect, useState } from 'react';
  * >
  *   <div>Content slides from right</div>
  * </AnimationLoader>
- * 
+ *
  * @example
  * // Infinite pulse animation
  * <AnimationLoader
@@ -34,7 +34,7 @@ import { ReactNode, useEffect, useState } from 'react';
  * >
  *   <div>Pulsing content</div>
  * </AnimationLoader>
- * 
+ *
  * @example
  * // Fade in with bounce
  * <AnimationLoader
@@ -69,22 +69,29 @@ const AnimationLoader = ({
     bounce = 1,
 }: AnimationLoaderProps) => {
     const [isMobile, setIsMobile] = useState(false);
+    const [hasCheckedMobile, setHasCheckedMobile] = useState(false);
 
     useEffect(() => {
         const checkMobile = () => {
             setIsMobile(window.innerWidth <= 768);
+            setHasCheckedMobile(true);
         };
-        
+
         checkMobile();
         window.addEventListener('resize', checkMobile);
-        
+
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
+
+    // Don't render anything until we've checked if we're on mobile
+    if (!hasCheckedMobile) {
+        return null;
+    }
 
     const getInitialPosition = () => {
         if (isMobile) return {};
         if (effect === 'fadeIn') return { opacity: 0 };
-        
+
         switch (direction) {
             case 'up':
                 return { y: 50, opacity: 0 };
@@ -117,7 +124,7 @@ const AnimationLoader = ({
 
     const getEffectAnimation = () => {
         if (isMobile) return {};
-        
+
         switch (effect) {
             case 'pulse':
                 return {
@@ -125,7 +132,7 @@ const AnimationLoader = ({
                     transition: {
                         repeat: infinite ? Infinity : 0,
                         duration: duration,
-                    }
+                    },
                 };
             case 'bounce':
                 return {
@@ -133,7 +140,7 @@ const AnimationLoader = ({
                     transition: {
                         repeat: infinite ? Infinity : 0,
                         duration: duration,
-                    }
+                    },
                 };
             case 'shake':
                 return {
@@ -141,7 +148,7 @@ const AnimationLoader = ({
                     transition: {
                         repeat: infinite ? Infinity : 0,
                         duration: duration,
-                    }
+                    },
                 };
             default:
                 return {};

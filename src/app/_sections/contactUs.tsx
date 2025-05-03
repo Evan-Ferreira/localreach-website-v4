@@ -42,7 +42,7 @@ const ContactUs = () => {
     return (
         <div
             id="learn-more"
-            className="w-screen mb-32 h-screen bg-[var(--background)] flex flex-row lg:px-36 px-12 py-12 justify-center items-center gap-36"
+            className="w-full h-screen bg-[var(--background)] flex flex-row lg:px-36 px-12 py-12 justify-center items-center gap-36 overflow-x-hidden"
         >
             <Image
                 src="/taiv_contact.jpg"

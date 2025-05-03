@@ -7,7 +7,7 @@ import AnimationLoader from '../_components/landing/animationloader';
 
 const Landing = () => {
     return (
-        <div className="h-screen w-screen flex flex-row z-100">
+        <div className="h-screen w-full overflow-x-hidden flex flex-row z-100">
             <Background />
             <div className="flex justify-end max-lg:justify-center flex-col">
                 <div className="max-h-3/4 w-full pl-12 max-md:pr-12 md:pl-36 flex flex-col gap-4 pb-24">

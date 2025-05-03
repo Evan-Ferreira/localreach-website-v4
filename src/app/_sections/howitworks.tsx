@@ -5,7 +5,7 @@ const HowItWorks: React.FC = () => {
     return (
         <div
             id="how-it-works"
-            className="h-full w-full bg-[var(--background)] py-12 px-8 md:px-36 "
+            className="h-full w-full bg-[var(--background)] py-12 px-8 md:px-36"
         >
             <div className="text-center pb-8   relative z-100">
                 <div className="px-12">

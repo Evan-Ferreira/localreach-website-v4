@@ -1,13 +1,13 @@
 const Background = () => {
     return (
-        <div className="absolute h-full w-full -z-10">
+        <div className="absolute h-screen w-screen -z-10">
             {' '}
             <video
                 src={'landing-background.mp4'}
                 autoPlay
                 muted
                 loop
-                className="w-full absolute h-full object-cover"
+                className="w-full h-full object-cover"
             />
             <div className="w-full h-full absolute bg-[#080808] opacity-30"></div>
             <div
