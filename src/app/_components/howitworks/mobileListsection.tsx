@@ -40,13 +40,11 @@ const MobileImageScrollView = () => {
             title: 'Sign Up & Install Your Device',
             description: (
                 <>
-                    Register your restaurant with Local Reach and receive our
-                    easy-to-install IoT device.
+                    Register to receive our device then simply
                     <strong>
                         {' '}
-                        Simply plug it into your existing TV setup, and our
-                        system will seamlessly integrate with your screens—no
-                        technical expertise required.
+                        plug it into your existing TV setup to allow for
+                        seamless integration.
                     </strong>
                 </>
             ),

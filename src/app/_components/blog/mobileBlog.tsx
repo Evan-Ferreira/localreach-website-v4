@@ -68,7 +68,7 @@ const MobileBlog = () => {
 
             <div className="flex flex-col items-center w-full">
                 {/* Blog post card */}
-                <div className="w-full bg-[#2121218f] h-112 rounded-lg mb-6 cursor-pointer transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg">
+                <div className="w-full bg-[#2121218f] h-122 rounded-lg mb-6 cursor-pointer transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg">
                     <div
                         className="relative w-full h-50"
                         onClick={() =>
@@ -117,7 +117,7 @@ const MobileBlog = () => {
                     </div>
 
                     {/* Navigation buttons */}
-                    <div className="flex justify-between w-full">
+                    <div className="flex justify-between px-4 w-full">
                         <button
                             onClick={() =>
                                 handleStepChange(Math.max(0, activeIndex - 1))
