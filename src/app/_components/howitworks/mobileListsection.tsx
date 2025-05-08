@@ -31,7 +31,7 @@ const MobileImageScrollView = () => {
 
     const images = [
         { src: '/HIW1.jpg', alt: 'image1' },
-        { src: '/HIW2.mp4', alt: 'image2' },
+        { src: '/PilotHouse.mp4', alt: 'image2' },
         { src: '/HIW3.jpg', alt: 'image3' },
     ];
     const steps = [
