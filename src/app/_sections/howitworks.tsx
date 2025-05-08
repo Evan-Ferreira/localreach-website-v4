@@ -17,7 +17,7 @@ const HowItWorks: React.FC = () => {
                         100% hassle free.
                     </h4>
                 </div>
-                <div className="bg-[#2121218f] h-fit bg-opacity-100 py-8 p-8 pt-4 rounded relative z-100">
+                <div className="bg-[#2121218f] h-fit bg-opacity-100 py-8 md:p-8 pt-4 rounded relative z-100">
                     <div className="md:hidden">
                         <MobileListSection />
                     </div>

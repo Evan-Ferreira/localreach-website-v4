@@ -7,12 +7,12 @@ const Tabs: React.FC = () => {
     const [activeTab, setActiveTab] = useState<number>(0);
     const tabs = [
         {
-            label: "For Advertisers",
-            content: <AdvertiserTab />
+            label: 'For Advertisers',
+            content: <AdvertiserTab />,
         },
         {
-            label: "For Restaurants",
-            content: <RestaurantTab />
+            label: 'For Restaurants',
+            content: <RestaurantTab />,
         },
     ];
 
@@ -59,7 +59,7 @@ const Tabs: React.FC = () => {
                 </div>
             </div>
 
-            <div className="mx-0 h-[3px] w-full bg-[var(--text-highlight)]"></div>
+            <div className="mt-24 md:mt-0 h-[3px] w-full bg-[var(--text-highlight)]"></div>
         </div>
     );
 };
